@@ -1,0 +1,53 @@
+<?php
+
+return [
+    'procurement_team'=>[
+        'procured_by'=>[
+            'c.keav@princebank.com.kh',
+            'savuth.sreyda@princebank.com.kh',
+            'phan.sinat@princebank.com.kh',
+            't.daliya@princebank.com.kh',
+            'bun.sereyvuth@princebank.com.kh',
+            'you.sreyno@princebank.com.kh',
+        ],
+        'allowance'=>[
+            'phan.sinat@princebank.com.kh',
+            't.daliya@princebank.com.kh',
+            'bun.sereyvuth@princebank.com.kh',
+            'c.keav@princebank.com.kh',
+            'savuth.sreyda@princebank.com.kh',
+            'you.sreyno@princebank.com.kh',
+            ]
+    ],
+    'admin_team'=>[
+        'procured_by'=>[
+            'v.senghong@princebank.com.kh',
+            'un.dalis@princebank.com.kh',
+        ],
+        'allowance'=>[
+            'v.senghong@princebank.com.kh',
+            'un.dalis@princebank.com.kh',
+            'poeng.hok@princebank.com.kh',
+            'yat.yon@princebank.com.kh',
+            'yem.veasna@princebank.com.kh',
+            'c.leap@princebank.com.kh',
+            'sao.sorphorn@princebank.com.kh',
+            'ngang.sengchhun@princebank.com.kh',
+        ]
+    ],
+    'marketing_team'=>[
+        'procured_by'=>[
+            'v.sorya@princebank.com.kh',
+            'v.sambath@princebank.com.kh',
+            'reoun.visal@princebank.com.kh',
+            
+        ],
+        'allowance'=>[
+            'tang.youhy@princebank.com.kh',
+            'v.sorya@princebank.com.kh',
+            'veng.sermei@princebank.com.kh',
+            'reoun.visal@princebank.com.kh',
+            'v.sambath@princebank.com.kh',
+        ]
+    ]
+];

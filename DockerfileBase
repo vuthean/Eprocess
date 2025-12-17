@@ -1,0 +1,47 @@
+# Use official PHP Apache image
+FROM 10.80.80.148:5000/php:8.2-apache
+
+# Install dependencies
+RUN set -eux; \
+    apt-get update && apt-get install -y --no-install-recommends \
+        apt-transport-https \
+        ca-certificates \
+        gnupg \
+        libmcrypt-dev \
+        libpng-dev \
+        libjpeg-dev \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libbz2-dev \
+        libgd-dev \
+        libxslt-dev \
+        jpegoptim \
+        optipng \
+        pngquant \
+        gifsicle \
+        libonig-dev \
+        libxml2-dev \
+        zip \
+        zlib1g-dev \
+        libzip-dev \
+        openssl \
+        unzip \
+        git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install PHP extension installer
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
+
+# Install required PHP extensions
+RUN install-php-extensions ldap pdo mbstring zip gd mysqli pdo_mysql
+
+# Configure GD extension
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg && docker-php-ext-install gd
+
+# Copy Composer binary to reduce image size
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Manually Copy Vendor
+# COPY vendor /var/www/html/vendor
+

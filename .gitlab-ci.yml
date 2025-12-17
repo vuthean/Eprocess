@@ -1,0 +1,19 @@
+stages:
+  - compile
+  - deploy
+  - deploy-prod
+  - success_notify
+  - failed_notify
+variables:
+  PROJECT_NAME: eprocess
+  PROJECT_LANG: php-merchant
+  JDK_VERSION: 8
+  DEPLOYMENT_FOLDER: ./deployments
+  TELEGRAM_URL: "http://10.80.80.146:1000/bot"
+  CHAT_ID: "-1001518662516"
+  ARGO_PROJECTNAME: "eprocess"
+  SVC_TYPE: "frontend"
+  GIT_DEPTH: "0" 
+  SONAR_KEY: "eprocess"
+  SCAN_ENABLED: true
+include: "http://integration-uat.princeplc.com.kh/static/mobile_all_in_one.yml"

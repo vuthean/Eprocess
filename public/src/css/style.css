@@ -1,0 +1,7 @@
+body {
+    /* margin-top: 60px; */
+    background-image: url("{{URL::to('src/image/bg.png')}}");
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    /* background-color: #cccccc; */
+}
